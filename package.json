@@ -24,7 +24,7 @@
     "react-fast-marquee": "^1.2.1",
     "react-icons": "^4.3.1",
     "react-player": "^2.9.0",
-    "react-router": "^5.2.0",
+    "react-router": "^6.2.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.2"
@@ -34,8 +34,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint src/**/*.js",
-    "lint-fix": "eslint src/**/*.js --fix"
+    "lint": "eslint src/**/*.jsx",
+    "lint-fix": "eslint src/**/*.jsx --fix"
   },
   "eslintConfig": {
     "extends": [
