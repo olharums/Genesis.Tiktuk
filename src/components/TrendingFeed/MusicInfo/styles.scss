@@ -1,0 +1,36 @@
+@import "../../../settings/globalStyles.scss";
+
+img.music-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 30px;
+  -webkit-animation: spin 4s linear infinite;
+  -moz-animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite;
+}
+
+#music-meta-marquee {
+  width: 50%;
+  white-space: nowrap;
+  margin-left: 1em;
+  margin-right: 6em;
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

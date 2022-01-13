@@ -2,11 +2,11 @@ import React, { useContext, useEffect, useState } from "react";
 import { observer } from "mobx-react-lite";
 import { Container } from "react-bootstrap";
 import { Skeleton } from "@mui/material";
-import axios from "axios";
+// import axios from "axios";
 
-import { optionTrendingFeed } from "../utils/optionsForRequest";
-import { userAndFeedDataContext } from "../WrappedApp";
-import Post from "../components/TrendingFeed/Post";
+// import { optionTrendingFeed } from "../utils/optionsForRequest";
+import { userAndFeedDataContext } from "../ContextedApp";
+import Post from "../components/TrendingFeed/Post/Post";
 
 const TrendingFeed = observer(() => {
   const { trendingFeed } = useContext(userAndFeedDataContext);
@@ -14,15 +14,17 @@ const TrendingFeed = observer(() => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios
-      .request(optionTrendingFeed)
-      .then((response) => {
-        trendingFeed.setPosts(response.data);
-      })
-      .catch((error) => {
-        console.error(error);
-      })
-      .finally(() => setLoading(false));
+    setLoading(false);
+    // axios
+    // .request(optionTrendingFeed)
+    // .then((response) => {
+    //   trendingFeed.setPosts(response.data);
+    //   localStorage.setItem("TrendingFeed", JSON.stringify(response.data));
+    // })
+    // .catch((error) => {
+    //   console.error(error);
+    // })
+    // .finally(() => setLoading(false));
   }, [trendingFeed]);
 
   if (loading) {

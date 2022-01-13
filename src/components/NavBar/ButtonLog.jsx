@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Button } from "react-bootstrap";
 import { observer } from "mobx-react-lite";
 
-import { userAndFeedDataContext } from "../../WrappedApp";
+import { userAndFeedDataContext } from "../../ContextedApp";
 
 const ButtonLog = observer(({ text }) => {
   const { user } = useContext(userAndFeedDataContext);

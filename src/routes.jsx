@@ -1,6 +1,6 @@
 import TrendingFeed from "./pages/TrendingFeed";
 import OtherUserProfile from "./pages/OtherUserProfile";
-import UserProfile from "./pages/UserProfile";
+import UserProfile from "./pages/UserProfile/UserProfile";
 import { PROFILE_ROUTE, TRENDING_FEED_ROUTE } from "./utils/consts";
 
 const appRoutes = [
