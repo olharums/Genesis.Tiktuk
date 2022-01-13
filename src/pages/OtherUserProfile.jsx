@@ -3,7 +3,7 @@ import { observer } from "mobx-react-lite";
 import { Container } from "react-bootstrap";
 import { useParams } from "react-router";
 
-import { userAndFeedDataContext } from "../WrappedApp";
+import { userAndFeedDataContext } from "../ContextedApp";
 import UserInfo from "../components/UserProfile/UserInfo";
 
 const OtherUserProfile = observer(() => {

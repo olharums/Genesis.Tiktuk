@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import "./index.css";
-import WrappedApp from "./WrappedApp";
+import ContextedApp from "./ContextedApp";
 
-ReactDOM.render(<WrappedApp />, document.getElementById("root"));
+ReactDOM.render(<ContextedApp />, document.getElementById("root"));

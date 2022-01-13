@@ -1,14 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { BiLink } from "react-icons/bi";
 import PropTypes from "prop-types";
 
-import shortenNumber from "../../utils/shortenNumber";
 import { PROFILE_ROUTE } from "../../utils/consts";
+import Signature from "./Signature/Signature";
+import UserStats from "./UserStats";
+import SubscribeButton from "./SubscribeButton/SubscribeButton";
 
 const UserInfo = function ({ user, location }) {
-  const [subsribed, setSubscribed] = useState(false);
-
   return (
     <Container className="d-flex flex-column align-items-center text-center">
       <Row className="m-3 p-2">
@@ -23,54 +22,15 @@ const UserInfo = function ({ user, location }) {
         </Col>
       </Row>
 
-      <Row className="mb-3">
-        <Col>
-          <h3>{shortenNumber(user.following)}</h3>
-          <h4 style={{ color: "grey" }}>Підписки</h4>
-        </Col>
+      <UserStats
+        following={user.following}
+        fans={user.fans}
+        heart={user.heart}
+      />
 
-        <Col id="borders-x-grey" className="mx-3">
-          <h3>{shortenNumber(user.fans)}</h3>
-          <h4 className="color-grey">Підписники</h4>
-        </Col>
+      {!(location.pathname === PROFILE_ROUTE) && <SubscribeButton />}
 
-        <Col>
-          <h3>{shortenNumber(user.heart)}</h3>
-          <h4 className="color-grey">Вподобання</h4>
-        </Col>
-      </Row>
-
-      {!(location.pathname === PROFILE_ROUTE) && (
-        <Row>
-          <button
-            type="button"
-            onClick={() => setSubscribed(!subsribed)}
-            id="subscribe-button-size"
-            className={`m-4 ${
-              subsribed ? "unsubscribe-button-color" : "subscribe-button-color"
-            }`}
-          >
-            <h3> {subsribed ? "Відписатися" : "Підписатися"}</h3>
-          </button>
-        </Row>
-      )}
-
-      <Row>
-        <h4>{user.signature}</h4>
-        <div className="bio-link" hidden={!user.bioLink.filled}>
-          <a
-            href={`https://www.${user.bioLink.link}`}
-            target="_blank"
-            rel="noreferrer"
-          >
-            {" "}
-            <h4>
-              <BiLink size="1.5em" />
-              {user.bioLink.link}
-            </h4>
-          </a>
-        </div>
-      </Row>
+      <Signature signature={user.signature} bioLink={user.bioLink} />
     </Container>
   );
 };

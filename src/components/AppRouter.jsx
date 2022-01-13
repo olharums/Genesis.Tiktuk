@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { observer } from "mobx-react-lite";
 import { Switch, Route, Redirect } from "react-router-dom";
 
-import { userAndFeedDataContext } from "../WrappedApp";
+import { userAndFeedDataContext } from "../ContextedApp";
 import appRoutes from "../routes";
 import { PROFILE_ROUTE } from "../utils/consts";
 
