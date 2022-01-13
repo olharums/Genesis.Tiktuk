@@ -6,6 +6,7 @@ import { PROFILE_ROUTE } from "../../utils/consts";
 import Signature from "./Signature/Signature";
 import UserStats from "./UserStats";
 import SubscribeButton from "./SubscribeButton/SubscribeButton";
+import "../../settings/globalStyles.scss";
 
 const UserInfo = function ({ user, location }) {
   return (
