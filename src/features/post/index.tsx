@@ -11,6 +11,7 @@ const Post: FC<{ post: IPost }> = function ({ post }) {
 
   return (
     <RowStyled
+      data-testid={"video-player-row"}
       onMouseEnter={() => {
         setToPlay(true);
       }}
@@ -20,11 +21,11 @@ const Post: FC<{ post: IPost }> = function ({ post }) {
       onClick={() => {
         setToPlay(!toPlay);
       }}
-      data-testid={"video-container"}
     >
       <ColStyled>
         <RowStyled>
           <ReactPlayer
+            data-testid={"video-player"}
             id={`player${post.id}`}
             name="media"
             height="45em"

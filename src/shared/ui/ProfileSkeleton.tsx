@@ -20,7 +20,7 @@ const ProfileSkeleton: FC = function () {
         height={100}
       />
 
-      {["Skel-rect-1", "Skel-rect-2"].map((key) => (
+      {["SR-15-1", "SR-15-2"].map((key) => (
         <Skeleton
           key={key}
           className="m-2"
@@ -31,7 +31,7 @@ const ProfileSkeleton: FC = function () {
       ))}
 
       <Row className="mt-5">
-        {[1, 2, 3].map((number) => (
+        {["SR-20-1", "SR-20-2", "SR-20-3"].map((number) => (
           <Col key={number}>
             <Skeleton
               className="mx-2"

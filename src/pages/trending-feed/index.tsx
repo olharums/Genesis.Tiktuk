@@ -49,7 +49,7 @@ const TrendingFeed: FC = observer(() => {
   }
 
   return (
-    <ContainerStyled data-testid={"trending-feed"}>
+    <ContainerStyled>
       {trendingFeed.posts.map((post: IPost) => (
         <Post post={post} key={post.id} />
       ))}

@@ -26,9 +26,9 @@ const UserInfo: FC<{ user: IUser }> = function ({ user }) {
         heart={user.heart}
       />
 
-      {useLocation().pathname !== PROFILE_ROUTE && <SubscribeButton />}
-
       <Signature signature={user.signature} bioLink={user.bioLink} />
+
+      {useLocation().pathname !== PROFILE_ROUTE && <SubscribeButton />}
     </ContainerStyled>
   );
 };

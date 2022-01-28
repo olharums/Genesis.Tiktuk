@@ -50,15 +50,16 @@ const VideoStats: FC<VideoStatsProps> = function ({
         size="3em"
         className={liked ? "liked" : "notLiked"}
         onClick={handleLike}
+        data-testid="BsHeartFillStyled"
       />
 
-      <TextStyled>{shortenNumber(stats.diggCount)}</TextStyled>
+      <TextStyled>{shortenNumber(diggCount)}</TextStyled>
 
-      <AiOutlineCommentStyled size="3em" />
+      <AiOutlineCommentStyled size="3em" data-testid="AiOutlineCommentStyled" />
 
       <TextStyled>{shortenNumber(stats.commentCount)}</TextStyled>
 
-      <FaShareStyled size="3em" />
+      <FaShareStyled size="3em" data-testid="FaShareStyled" />
 
       <TextStyled>{shortenNumber(stats.shareCount)}</TextStyled>
     </ContainerStyled>

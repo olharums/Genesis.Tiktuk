@@ -10,6 +10,7 @@ const SubscribeButton: FC = function () {
     <Row>
       <SubscribeButtonStyled
         type="button"
+        data-testid="SubscribeButtonStyled"
         onClick={() => setSubscribed(!subsribed)}
         className={subsribed ? "subscribed" : "unsubscribed"}
       >

@@ -15,7 +15,7 @@ const Signature: FC<SignatureProps> = function ({ signature, bioLink }) {
   return (
     <Row>
       <h4>{signature}</h4>
-      <DivStyled role={"bioLink"} hidden={!bioLink.filled}>
+      <DivStyled data-testid={"bioLink"} hidden={!bioLink.filled}>
         <LinkStyled
           href={`https://www.${bioLink.link}`}
           target="_blank"

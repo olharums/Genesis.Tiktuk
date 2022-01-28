@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const SubscribeButtonStyled = styled.button`
-  width: 25em;
+  width: 25em !important;
   height: 5em;
   border-color: #fe2c55;
   border-radius: 3px;

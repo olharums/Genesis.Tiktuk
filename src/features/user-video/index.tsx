@@ -13,6 +13,7 @@ const UserVideo: FC<{ post: IPost }> = observer(({ post }) => (
   <Col md={4} key={post.id}>
     <PlayerContainerStyled>
       <ReactPlayer
+        data-testid="user-video-player"
         width="100%"
         name="media"
         url={post.video.playAddr}
@@ -23,7 +24,7 @@ const UserVideo: FC<{ post: IPost }> = observer(({ post }) => (
     </PlayerContainerStyled>
 
     <ContainerStyled>
-      <FiPlay size="2em" />
+      <FiPlay size="2em" data-testid="fiplay" />
       <h3>{shortenNumber(post.stats.playCount)}</h3>
     </ContainerStyled>
   </Col>

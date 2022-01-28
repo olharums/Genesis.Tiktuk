@@ -13,7 +13,7 @@ const appRoutes = [
     Component: UserProfile,
   },
   {
-    path: `${TRENDING_FEED_ROUTE}/:id`,
+    path: `${TRENDING_FEED_ROUTE}/:userId`,
     Component: OtherUserProfile,
   },
 ];

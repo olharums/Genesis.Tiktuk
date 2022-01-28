@@ -40,7 +40,7 @@ export const UserProfile: FC = observer(() => {
 
   if (!user?.userInfo) {
     return (
-      <Container>
+      <Container data-testid="error-container">
         <h2>Error</h2>
       </Container>
     );
@@ -52,7 +52,7 @@ export const UserProfile: FC = observer(() => {
 
       <RowStyled>
         {user.userFeed.map((post: IPost) => (
-          <UserVideo post={post} />
+          <UserVideo post={post} key={post.id} />
         ))}
       </RowStyled>
     </ContainerStyled>

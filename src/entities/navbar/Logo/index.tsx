@@ -14,12 +14,7 @@ const Logo: FC = function () {
         alt="App logo"
       />
 
-      <LogoLinkStyled
-        data-testid={"link-to-trending-feed"}
-        to={TRENDING_FEED_ROUTE}
-      >
-        TikTuk
-      </LogoLinkStyled>
+      <LogoLinkStyled to={TRENDING_FEED_ROUTE}>TikTuk</LogoLinkStyled>
     </ContainerStyled>
   );
 };

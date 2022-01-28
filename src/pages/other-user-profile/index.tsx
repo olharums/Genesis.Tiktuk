@@ -11,7 +11,7 @@ import { formUserInfo } from "./formUserInfo";
 import { ContainerStyled } from "./styles";
 
 const OtherUserProfile: FC = observer(() => {
-  const { userId } = useParams<{ userId?: string }>();
+  const userId = useParams<{ userId?: string }>()?.userId;
 
   const trendingFeed = useContext(userAndFeedDataContext)?.trendingFeed;
 
@@ -20,7 +20,7 @@ const OtherUserProfile: FC = observer(() => {
   )?.authorMeta;
 
   if (!otherUser) {
-    return <Container>Error</Container>;
+    return <Container data-testid="error-container">Error{userId}m</Container>;
   }
 
   return (
