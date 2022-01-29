@@ -10,20 +10,11 @@ import { IPost } from "../../shared/types/trending-feed/IPost";
 import { getLiftingOfDescription } from "./lib/getLiftingOfDescription";
 import { formStats } from "./lib/formStats";
 
-import { ContainerStyled, UserNameStyled } from "./styles.js";
+import { ContainerStyled, RowStyled, UserNameStyled } from "./styles.js";
 
 const PostInfo: FC<{ post: IPost }> = function ({ post }) {
-  const RowPostInfo = styled(Row)`
-    width: 420px;
-    position: relative;
-    left: 7rem;
-    color: white;
-    font-family: sans-serif;
-    top: ${-getLiftingOfDescription(post.text) - 70}px;
-  `;
-
-  const PostText = styled.h5`
-    width: ${post.videoMeta ? post.videoMeta.width - 30 : 930}px;
+  const TextStyled = styled.h5`
+    width: ${post.videoMeta ? post.videoMeta.width - 30 : 930};
   `;
 
   const navigate = useNavigate();
@@ -33,7 +24,7 @@ const PostInfo: FC<{ post: IPost }> = function ({ post }) {
   };
 
   return (
-    <RowPostInfo>
+    <RowStyled top={-getLiftingOfDescription(post.text) - 70}>
       <h5>
         <UserNameStyled role="button" tabIndex={0} onClick={refToOtherUser}>
           @{post.authorMeta && post.authorMeta.name}
@@ -41,7 +32,7 @@ const PostInfo: FC<{ post: IPost }> = function ({ post }) {
         &nbsp;&bull; {new Date(post.createTime).toLocaleDateString()}
       </h5>
 
-      <PostText>{post.text}</PostText>
+      <TextStyled>{post.text}</TextStyled>
 
       <MusicInfo musicMeta={post.musicMeta} />
 
@@ -52,7 +43,7 @@ const PostInfo: FC<{ post: IPost }> = function ({ post }) {
           refToOtherUser={refToOtherUser}
         />
       </ContainerStyled>
-    </RowPostInfo>
+    </RowStyled>
   );
 };
 

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Container } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 
 export const UserNameStyled = styled.a`
   color: white;
@@ -15,4 +15,13 @@ export const ContainerStyled = styled(Container)`
   top: -40em;
   left: 10em;
   position: relative;
+`;
+
+export const RowStyled = styled(Row)`
+  width: 420px;
+  position: relative;
+  left: 7rem;
+  color: white;
+  font-family: sans-serif;
+  top: ${(props) => props.top}px;
 `;
