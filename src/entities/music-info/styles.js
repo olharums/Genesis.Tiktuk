@@ -1,33 +1,21 @@
 import { Container } from "react-bootstrap";
 import { BsMusicNoteBeamed } from "react-icons/bs";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
-export const MusicIconStyled = styled.img`
+const spin = keyframes`
+ from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }`;
+
+export const MusicIcon = styled.img`
   width: 55px;
   height: 55px;
   border-radius: 30px;
-  -webkit-animation: spin 4s linear infinite;
-  -moz-animation: spin 4s linear infinite;
-  animation: spin 4s linear infinite;
-
-
-  @-moz-keyframes spin {
-    100% {
-      -moz-transform: rotate(360deg);
-    }
-  }
-
-  @-webkit-keyframes spin {
-    100% {
-      -webkit-transform: rotate(360deg);
-    }
-  }
-
-  @keyframes spin {
-    100% {
-      -webkit-transform: rotate(360deg);
-      transform: rotate(360deg);
-    }
+  animation: ${spin} 4s linear infinite;
 `;
 
 export const MusicMetaMarqueeStyled = styled.div`

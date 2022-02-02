@@ -13,10 +13,19 @@ export const NavbarLinkStyled = styled(NavLink)`
   }
 `;
 
+export const UserName = styled(NavbarLinkStyled)`
+  margin-left: 8rem;
+`;
+
 export const NavbarStyled = styled(Navbar)`
   display: flex !important;
   justify-content: space-between !important;
   padding-left: 3rem;
   padding-right: 3rem;
   background-color: #212529;
+`;
+
+export const DivStyled = styled.div`
+  display: flex;
+  align-items: center;
 `;

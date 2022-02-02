@@ -11,11 +11,17 @@ import { IUser } from "./IUser";
 import { ContainerStyled, ImgStyled, RowStyled } from "./styles";
 
 const UserInfo: FC<{ user: IUser }> = function ({ user }) {
+  const defaultAvatar = "https://img.icons8.com/android/96/000000/user.png";
   return (
     <ContainerStyled>
       <RowStyled>
         <Col>
-          <ImgStyled width="25%" src={user.avatar} alt="user's avatar" />
+          <ImgStyled
+            width="200px"
+            // src={user.avatar || defaultAvatar} // user.avatar has an outdated link
+            src={defaultAvatar}
+            alt="user's avatar"
+          />
           <h2>@{user.name}</h2>
         </Col>
       </RowStyled>

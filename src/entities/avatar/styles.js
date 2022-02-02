@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
-export const UserIconStyled = styled.img`
+export const UserAvatar = styled.img`
   border-radius: 30px;
+  border: 1px solid white;
+  background-color: white;
 `;
 
-export const DivStyled = styled.div`
+export const Container = styled.div`
   margin-bottom: 3rem;
 `;

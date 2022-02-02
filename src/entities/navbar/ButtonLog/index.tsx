@@ -14,6 +14,7 @@ const ButtonLog: FC<{ text: ButtonLogText }> = observer(({ text }) => {
 
   return (
     <Button
+      className="mx-2"
       size="lg"
       variant="outline-light"
       onClick={() => user?.setIsAuth(!user?.isAuth)}

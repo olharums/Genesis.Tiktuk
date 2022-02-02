@@ -2,7 +2,7 @@ import { FC } from "react";
 
 import { IAuthorMeta } from "../../shared/types/trending-feed";
 
-import { DivStyled, UserIconStyled } from "./styles.js";
+import { Container, UserAvatar } from "./styles.js";
 
 interface AvatarProps {
   authorMeta: IAuthorMeta;
@@ -14,14 +14,15 @@ const Avatar: FC<AvatarProps> = function ({ authorMeta, refToOtherUser }) {
     "https://img.icons8.com/external-bearicons-glyph-bearicons/64/000000/external-User-essential-collection-bearicons-glyph-bearicons.png";
 
   return (
-    <DivStyled role="button" tabIndex={0} onClick={refToOtherUser}>
-      <UserIconStyled
+    <Container role="button" tabIndex={0} onClick={refToOtherUser}>
+      <UserAvatar
         width="55px"
         height="55px"
         alt="user icon"
-        src={(authorMeta && authorMeta.avatar) || defaultAvatar}
+        // src={(authorMeta && authorMeta.avatar) || defaultAvatar} // meta has outdated links
+        src={defaultAvatar}
       />
-    </DivStyled>
+    </Container>
   );
 };
 

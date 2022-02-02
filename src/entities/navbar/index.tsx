@@ -5,15 +5,21 @@ import { PROFILE_ROUTE, TRENDING_FEED_ROUTE } from "../../shared/lib/paths";
 import { userAndFeedDataContext } from "../../app";
 import Logo from "./Logo";
 import ButtonLog, { ButtonLogText } from "./ButtonLog";
+import { ThemeSwitch } from "./ThemeSwitch";
 
-import { NavbarLinkStyled, NavbarStyled } from "./styles.js";
+import {
+  DivStyled,
+  NavbarLinkStyled,
+  NavbarStyled,
+  UserName,
+} from "./styles.js";
 
 interface IButtonEnum {
   [ButtonLogText.logout]: JSX.Element;
   [ButtonLogText.login]: JSX.Element;
 }
 
-const NavBar: FC = observer(() => {
+const NavBar: FC<{ changeTheme: () => void }> = observer(({ changeTheme }) => {
   const user = useContext(userAndFeedDataContext)?.user;
 
   const BUTTON_LOG_BY_USER_AUTHORIZATION: IButtonEnum = {
@@ -28,17 +34,18 @@ const NavBar: FC = observer(() => {
       )}
 
       {user?.isAuth ? (
-        <NavbarLinkStyled to={PROFILE_ROUTE}>
-          {user.userInfo?.user.nickname}
-        </NavbarLinkStyled>
+        <UserName to={PROFILE_ROUTE}>{user.userInfo?.user.nickname}</UserName>
       ) : (
         <Logo />
       )}
+      <DivStyled>
+        {user &&
+          BUTTON_LOG_BY_USER_AUTHORIZATION[
+            user.isAuth ? ButtonLogText.logout : ButtonLogText.login
+          ]}
 
-      {user &&
-        BUTTON_LOG_BY_USER_AUTHORIZATION[
-          user.isAuth ? ButtonLogText.logout : ButtonLogText.login
-        ]}
+        <ThemeSwitch changeTheme={changeTheme} />
+      </DivStyled>
     </NavbarStyled>
   );
 });

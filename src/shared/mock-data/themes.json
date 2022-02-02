@@ -1,0 +1,18 @@
+{
+  "data": {
+    "light": {
+      "name": "Light",
+      "colors": {
+        "body": "white !important",
+        "text": "grey !important"
+      }
+    },
+    "dark": {
+      "name": "Dark",
+      "colors": {
+        "body": "black !important",
+        "text": "white !important"
+      }
+    }
+  }
+}

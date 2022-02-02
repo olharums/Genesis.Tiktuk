@@ -15,4 +15,7 @@ export const RowStyled = styled(Row)`
 
 export const ImgStyled = styled.img`
   border-radius: 10em;
+  border: 1px solid
+    ${({ theme }) => (theme.name === "Dark" ? "white" : "black")};
+  background-color: ${({ theme }) => (theme.name === "Dark" ? "white" : "")};
 `;

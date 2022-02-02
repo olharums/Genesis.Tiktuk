@@ -4,6 +4,9 @@ import TrendingFeedStore from "../models/TrendingFeedStore";
 import UserStore from "../models/UserStore";
 import App from "./App";
 
+import * as themes from "../shared/mock-data/themes.json";
+import { setToLS } from "../shared/lib/locStorageFuncs";
+
 interface IContext {
   user: UserStore;
   trendingFeed: TrendingFeedStore;
@@ -11,7 +14,7 @@ interface IContext {
 
 export const userAndFeedDataContext = createContext<IContext | null>(null);
 
-const ContextedApp: FC = function () {
+const ContextedApp: FC = () => {
   const stores = useMemo(
     () => ({
       user: new UserStore(),
@@ -19,6 +22,8 @@ const ContextedApp: FC = function () {
     }),
     []
   );
+
+  setToLS("all-themes", themes.data);
 
   return (
     <userAndFeedDataContext.Provider value={stores}>

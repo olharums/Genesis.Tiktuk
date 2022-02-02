@@ -1,12 +1,12 @@
 import { FC } from "react";
-// import Marquee from "react-double-marquee";
-// some problems have occured with the Marquee element, it will be replaced when API works
+import Marquee from "react-fast-marquee";
+
 import { IMusicMeta } from "../../shared/types/trending-feed";
 
 import {
   BsMusicNoteBeamedStyled,
   ContainerStyled,
-  MusicIconStyled,
+  MusicIcon,
   MusicMetaMarqueeStyled,
 } from "./styles.js";
 
@@ -18,14 +18,14 @@ const MusicInfo: FC<{ musicMeta: IMusicMeta }> = function ({ musicMeta }) {
       <BsMusicNoteBeamedStyled size="1em" data-testid={"music-sign"} />
 
       <MusicMetaMarqueeStyled>
-        {/* <Marquee direction="left"> */}
-        {`${musicMeta && musicMeta.musicName} - ${
-          musicMeta && musicMeta.musicAuthor
-        }`}
-        {/* </Marquee> */}
+        <Marquee gradient={false}>
+          {`${musicMeta && musicMeta.musicName} - ${
+            musicMeta && musicMeta.musicAuthor
+          }`}
+        </Marquee>
       </MusicMetaMarqueeStyled>
 
-      <MusicIconStyled
+      <MusicIcon
         alt="music icon"
         src={(musicMeta && musicMeta.coverThumb) || defaultMusicIcon}
       />

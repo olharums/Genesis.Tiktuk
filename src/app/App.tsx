@@ -1,4 +1,4 @@
-import { useContext, useEffect, FC } from "react";
+import { useContext, useEffect, FC, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 
 import { userAndFeedDataContext } from ".";
@@ -6,8 +6,11 @@ import NavBar from "../entities/navbar";
 import AppRouter from "../pages";
 import { getUserInfo } from "./api/getUserInfo";
 import userInfo from "../shared/mock-data/user-info";
+import GlobalStyle from "./globalStyles";
+import { useTheme } from "../models/useTheme";
+import { ThemeProvider } from "styled-components";
 
-const App: FC = function () {
+const App: FC = () => {
   const user = useContext(userAndFeedDataContext)?.user;
 
   useEffect(() => {
@@ -23,10 +26,22 @@ const App: FC = function () {
     //using mock data
   }, [user]);
 
+  const { theme, themeLoaded, changeTheme } = useTheme();
+  const [selectedTheme, setSelectedTheme] = useState(theme);
+
+  useEffect(() => {
+    setSelectedTheme(theme);
+  }, [theme]);
+
   return (
     <BrowserRouter>
-      <NavBar />
-      <AppRouter />
+      {themeLoaded && (
+        <ThemeProvider theme={selectedTheme}>
+          <GlobalStyle />
+          <NavBar changeTheme={changeTheme} />
+          <AppRouter />
+        </ThemeProvider>
+      )}
     </BrowserRouter>
   );
 };

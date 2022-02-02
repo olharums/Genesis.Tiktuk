@@ -6,7 +6,7 @@ export const SubscribeButtonStyled = styled.button`
   border-color: #fe2c55;
   border-radius: 3px;
   transition-duration: 0.5s;
-  margin: 1.5rem;
+  margin: 1.5rem 1rem !important;
 
   &:hover {
     box-shadow: 0px 0px 10px #fe2c55;

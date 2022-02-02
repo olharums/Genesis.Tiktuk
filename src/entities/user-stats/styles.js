@@ -2,7 +2,7 @@ import { Col, Row } from "react-bootstrap";
 import styled from "styled-components";
 
 export const GreyTextStyled = styled.h4`
-  color: grey;
+  color: ${({ theme }) => theme.colors.text};
 `;
 
 export const ColStyled = styled(Col)`
