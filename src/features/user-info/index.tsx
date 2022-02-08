@@ -1,4 +1,4 @@
-import { FC } from "react";
+import React, { FC } from "react";
 import { Col } from "react-bootstrap";
 import { useLocation } from "react-router";
 

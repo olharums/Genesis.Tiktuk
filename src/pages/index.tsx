@@ -1,4 +1,4 @@
-import { FC, useContext } from "react";
+import React, { FC, useContext } from "react";
 import { observer } from "mobx-react-lite";
 import { Route, Routes } from "react-router-dom";
 

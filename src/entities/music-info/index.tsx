@@ -1,4 +1,4 @@
-import { FC } from "react";
+import React, { FC } from "react";
 import Marquee from "react-fast-marquee";
 
 import { IMusicMeta } from "../../shared/types/trending-feed";

@@ -1,4 +1,4 @@
-import { useState, FC } from "react";
+import React, { useState, FC } from "react";
 import ReactPlayer from "react-player";
 
 import PostInfo from "../../entities/post-info";

@@ -1,4 +1,4 @@
-import { FC, useContext } from "react";
+import React, { FC, useContext } from "react";
 import { observer } from "mobx-react-lite";
 
 import { PROFILE_ROUTE, TRENDING_FEED_ROUTE } from "../../shared/lib/paths";

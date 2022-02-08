@@ -1,4 +1,4 @@
-import { useContext, useEffect, FC, useState } from "react";
+import React, { useContext, useEffect, FC, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 
 import { userAndFeedDataContext } from ".";

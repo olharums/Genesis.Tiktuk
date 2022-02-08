@@ -1,4 +1,4 @@
-import { useState, FC } from "react";
+import React, { useState, FC } from "react";
 import { Row } from "react-bootstrap";
 
 import { SubscribeButtonStyled } from "./styles.js";

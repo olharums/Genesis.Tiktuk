@@ -1,4 +1,4 @@
-import { createContext, useMemo, FC } from "react";
+import React, { createContext, useMemo, FC } from "react";
 
 import TrendingFeedStore from "../models/TrendingFeedStore";
 import UserStore from "../models/UserStore";

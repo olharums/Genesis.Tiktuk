@@ -1,4 +1,4 @@
-import { FC, useContext } from "react";
+import React, { FC, useContext } from "react";
 import { Button } from "react-bootstrap";
 import { observer } from "mobx-react-lite";
 

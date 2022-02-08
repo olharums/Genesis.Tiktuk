@@ -1,10 +1,11 @@
-import { FC } from "react";
+import React, { FC } from "react";
 import { Row } from "react-bootstrap";
-import { BiLink } from "react-icons/bi";
+
+import BeautifulLink from "@olharums/beautiful-link";
 
 import { IBioLink } from "./IBioLink";
 
-import { LinkStyled, DivStyled } from "./styles.js";
+import { DivStyled } from "./styles.js";
 
 interface SignatureProps {
   signature: string;
@@ -15,19 +16,11 @@ const Signature: FC<SignatureProps> = function ({ signature, bioLink }) {
   return (
     <Row>
       <h4>{signature}</h4>
-      <DivStyled data-testid={"bioLink"} hidden={!bioLink.filled}>
-        <LinkStyled
-          href={`https://www.${bioLink.link}`}
-          target="_blank"
-          rel="noreferrer"
-        >
-          {" "}
-          <h4>
-            <BiLink size="1.5em" />
-            {bioLink.link}
-          </h4>
-        </LinkStyled>
-      </DivStyled>
+      {bioLink.filled && (
+        <DivStyled data-testid={"bioLink"}>
+          <BeautifulLink link={bioLink.link} />
+        </DivStyled>
+      )}{" "}
     </Row>
   );
 };

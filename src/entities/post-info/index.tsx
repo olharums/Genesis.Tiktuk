@@ -1,4 +1,4 @@
-import { FC } from "react";
+import React, { FC } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { TRENDING_FEED_ROUTE } from "../../shared/lib/paths";

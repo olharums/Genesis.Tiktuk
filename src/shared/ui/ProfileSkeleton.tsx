@@ -1,6 +1,6 @@
 import { Skeleton } from "@mui/material";
 import { Col, Container, Row } from "react-bootstrap";
-import { FC } from "react";
+import React, { FC } from "react";
 
 const ProfileSkeleton: FC = function () {
   return (

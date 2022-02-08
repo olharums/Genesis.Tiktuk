@@ -1,4 +1,4 @@
-import { FC } from "react";
+import React, { FC } from "react";
 import { observer } from "mobx-react-lite";
 import { Col } from "react-bootstrap";
 import ReactPlayer from "react-player";

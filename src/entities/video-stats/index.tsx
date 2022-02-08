@@ -1,4 +1,4 @@
-import { MouseEvent, useState, FC } from "react";
+import React, { MouseEvent, useState, FC } from "react";
 
 import shortenNumber from "../../shared/lib/shortenNumber";
 import Avatar from "../avatar";
