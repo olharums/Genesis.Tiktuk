@@ -1,5 +1,16 @@
 # Genesis Frontend School Task - TikTuk
 
+The app include the following stack of technologies:
+- ReactJS
+- Typescipt
+- MobX
+- Axios
+- Styled Components
+- Bootstrap 5 (almost completely removed)
+- Unit tests using testing-library
+- Feature sliced design
+- Cordova
+
 The app has dark and light modes, version for Android devices
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
