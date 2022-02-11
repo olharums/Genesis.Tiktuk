@@ -6,14 +6,27 @@ export const MaterialUISwitch = styled(Switch)(() => ({
   height: 58,
   marginTop: "0 !important",
   marginBottom: "0 !important",
+  "@media (max-width: 577px)": {
+    width: 58,
+    height: 55,
+    marginRight: "-10px !important",
+    marginLeft: "0px !important",
+  },
   "& .MuiSwitch-switchBase": {
     top: "10px",
     margin: 1,
     padding: 0,
     transform: "translateX(10px)",
+    "@media (max-width: 577px)": {
+      margin: 0,
+    },
+
     "&.Mui-checked": {
       color: "#fff",
       transform: "translateX(30px)",
+      "@media (max-width: 577px)": {
+        transform: "translateX(10px)",
+      },
       "& .MuiSwitch-thumb:before": {
         borderRadius: "50%",
         backgroundImage: `url("https://i.ibb.co/jH4yCGj/sun.png")`,

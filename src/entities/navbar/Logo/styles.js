@@ -16,4 +16,8 @@ export const LogoLinkStyled = styled(NavLink)`
 export const ContainerStyled = styled(Container)`
   justify-content: center !important;
   margin-left: 15rem !important;
+
+  @media (max-width: 577px) {
+    margin-left: 0rem !important;
+  }
 `;

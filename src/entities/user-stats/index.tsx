@@ -3,7 +3,7 @@ import { Col } from "react-bootstrap";
 
 import shortenNumber from "../../shared/lib/shortenNumber";
 
-import { ColStyled, GreyTextStyled, RowStyled } from "./styles";
+import { ColStyled, GreyTextStyled, RowStyled, SimpleCol } from "./styles";
 
 interface UserStatsProps {
   following: number;
@@ -14,20 +14,20 @@ interface UserStatsProps {
 const UserStats: FC<UserStatsProps> = function ({ following, fans, heart }) {
   return (
     <RowStyled>
-      <Col>
+      <SimpleCol>
         <h3>{shortenNumber(following)}</h3>
         <GreyTextStyled>Підписки</GreyTextStyled>
-      </Col>
+      </SimpleCol>
 
       <ColStyled>
         <h3>{shortenNumber(fans)}</h3>
         <GreyTextStyled>Підписники</GreyTextStyled>
       </ColStyled>
 
-      <Col>
+      <SimpleCol>
         <h3>{shortenNumber(heart)}</h3>
         <GreyTextStyled>Вподобання</GreyTextStyled>
-      </Col>
+      </SimpleCol>
     </RowStyled>
   );
 };

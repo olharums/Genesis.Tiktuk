@@ -11,4 +11,8 @@ export const ContainerStyled = styled(Container)`
 export const RowStyled = styled(Row)`
   border-top: 1px solid grey;
   padding: 3rem;
+
+  @media (max-width: 577px) {
+    padding: 0.5rem;
+  }
 `;

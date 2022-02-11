@@ -5,6 +5,8 @@ export const ColStyled = styled(Col)`
   width: fit-content;
   margin-bottom: -35em;
   align-items: center;
+  margin: 0;
+  padding: 0;
 `;
 
 export const RowStyled = styled(Row)`
@@ -12,4 +14,6 @@ export const RowStyled = styled(Row)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0;
+  padding: 0;
 `;

@@ -18,6 +18,7 @@ export const ContainerStyled = styled(Container)`
 `;
 
 export const RowPostInfo = styled(Row)`
+  /* width: 420px; */
   width: 420px;
   position: relative;
   left: 7rem;

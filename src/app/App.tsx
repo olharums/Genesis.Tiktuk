@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, FC, useState } from "react";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 
 import { userAndFeedDataContext } from ".";
 import NavBar from "../entities/navbar";
@@ -34,7 +34,7 @@ const App: FC = () => {
   }, [theme]);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       {themeLoaded && (
         <ThemeProvider theme={selectedTheme}>
           <GlobalStyle />
@@ -42,7 +42,7 @@ const App: FC = () => {
           <AppRouter />
         </ThemeProvider>
       )}
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
