@@ -1,7 +1,8 @@
 import React, { FC } from "react";
 import { Row } from "react-bootstrap";
 
-import BeautifulLink from "@olharums/beautiful-link";
+// import BeautifulLink from "@olharums/beautiful-link";
+import BeautifulLink from "beautiful-link";
 
 import { IBioLink } from "./IBioLink";
 
