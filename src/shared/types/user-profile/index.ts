@@ -1,0 +1,9 @@
+export type { IAuthor } from "./IAuthor";
+export type { IAuthorStats } from "./IAuthorStats";
+export type { IChallenge } from "./IChallenge";
+export type { IMusic } from "./IMusic";
+export type { IPost } from "./IPost";
+export type { IStats } from "./IStats";
+export type { ITextExtra } from "./ITextExtra";
+export type { IVideo } from "./IVideo";
+export type { IEffectStickers } from "./IEffectStickers";
